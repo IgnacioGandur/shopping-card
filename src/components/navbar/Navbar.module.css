@@ -1,0 +1,245 @@
+@import "../../styles/variables.css";
+
+.navbar {
+    width: 100%;
+    background-color: #ffffff;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    padding: 7px 7px;
+    align-items: center;
+    position: relative;
+}
+
+.navbar > .logo {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.navbar > .logo > svg {
+    width: 125px;
+    height: auto;
+}
+
+.navbar > .logo > svg .moon {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: moonRotation 7s linear alternate infinite;
+    transition: all 5s ease-in-out;
+}
+
+.navbar > .logo > svg .bigCloud {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: cloudMovement 2s linear alternate infinite;
+}
+
+.navbar > .logo > svg .cloudRight {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: cloudMovement2 3s linear alternate-reverse infinite;
+}
+
+.navbar > .logo > svg .cloudLeft {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: cloudMovement3 6s linear alternate-reverse infinite;
+}
+
+.navbar > .logo > svg .topRightStar {
+    transform-box: fill-box;
+    transform-origin: 50% 50%;
+    animation: rotateStar 5s linear infinite;
+}
+
+.navbar > .logo > svg .bottomStar {
+    transform-box: fill-box;
+    transform-origin: center center;
+    animation: growAndShrink 2s linear infinite alternate;
+}
+
+.navbar > .logo svg .leftStar {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: growAndShrink 3s linear alternate infinite;
+}
+
+.navbar > .logo > svg .lineCloudsRight {
+    transform-box: fill-box;
+    transform-origin: center center;
+    animation: translateRightToLeft 10s linear alternate infinite;
+}
+
+.navbar > .logo > svg .lineCloudsLeft {
+    transform-box: fill-box;
+    transform-origin: center center;
+    animation: translateLeftToRight 10s ease-in-out alternate infinite;
+}
+
+.navbar > .logo > h1 {
+    font-family: var(--font-titles);
+    font-weight: 100;
+    color: transparent;
+    cursor: initial;
+    font-size: 1.75rem;
+    background-image: linear-gradient(
+        90deg,
+        var(--color-main),
+        var(--color-secondary)
+    );
+    background-clip: text;
+    position: absolute;
+    bottom: 0;
+}
+
+.navbar > .logo > h1 > span {
+    color: var(--color-main);
+    transition: var(--transition);
+    background-image: linear-gradient(
+        to bottom,
+        var(--color-main),
+        var(--color-secondary)
+    );
+    background-clip: text;
+    color: transparent;
+}
+
+.navbar > .logo > h1:hover > span {
+    color: white;
+}
+
+.navbar > nav {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.navbar > nav > a {
+    padding: 10px;
+    text-decoration: none;
+    font-family: var(--font-main);
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: var(--color-font);
+    border-bottom: 1px solid transparent;
+    transition: var(--transition);
+}
+
+.navbar > nav > a.active {
+    border-bottom: 1px solid var(--color-main);
+}
+
+.navbar > nav > a:hover {
+    border-bottom: 1px solid var(--color-main);
+}
+
+.navbar > button {
+    background-color: transparent;
+    transition: var(--transition);
+    cursor: pointer;
+    position: relative;
+    border: none;
+}
+
+.navbar > button > span {
+    font-size: 2.5rem;
+}
+
+.navbar > button:hover {
+    transform: scale(1.25);
+}
+
+.navbar > button > span:last-of-type {
+    height: 17px;
+    width: 17px;
+    background-color: var(--color-main);
+    border-radius: 50%;
+    font-size: 0.75rem;
+    position: absolute;
+    bottom: 3px;
+    left: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: var(--font-secondary);
+}
+
+@keyframes rotateStar {
+    from {
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+@keyframes growAndShrink {
+    from {
+        transform: scale(0.5);
+    }
+    to {
+        transform: scale(1.25);
+    }
+}
+
+@keyframes translateRightToLeft {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-125%);
+    }
+}
+
+@keyframes translateLeftToRight {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(150%);
+    }
+}
+
+@keyframes cloudMovement {
+    0% {
+        transform: scale(1) translateY(0px);
+    }
+    100% {
+        transform: scale(1.1) translateY(-3px);
+    }
+}
+
+@keyframes cloudMovement2 {
+    from {
+        transform: scale(1) translateX(0px);
+    }
+    to {
+        transform: scale(1.5) translateX(3px);
+    }
+}
+
+@keyframes cloudMovement3 {
+    0% {
+        transform: scale(1) translateX(0px);
+    }
+    50% {
+        transform: scale(0.75);
+    }
+    100% {
+        transform: scale(1.2) translateX(-3px);
+    }
+}
+
+@keyframes moonRotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(10deg);
+    }
+    100% {
+        transform: rotate(-10deg);
+    }
+}
