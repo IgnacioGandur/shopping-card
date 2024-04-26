@@ -1,0 +1,36 @@
+.products {
+    flex: 1;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+    grid-template-rows: repeat(700px);
+    gap: 40px;
+    padding: 25px;
+}
+
+.failedToFetchScreen {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+}
+
+.failedToFetchScreen > h1 {
+    text-align: center;
+    font-family: var(--font-secondary);
+}
+
+.failedToFetchScreen > img {
+    width: 50%;
+}
+
+.failedToFetchScreen > h2 {
+    font-family: var(--font-secondary);
+}
+
+.failedToFetchScreen > p {
+    font-family: var(--font-secondary);
+    opacity: 0.5;
+}

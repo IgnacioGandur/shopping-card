@@ -1,0 +1,39 @@
+.sloganSlide {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(#00000055, #00000055),
+        url("../../../../../assets/images/gifts.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    gap: 10px;
+}
+
+.sloganSlide > h2 {
+    font-family: var(--font-main);
+    color: white;
+    padding: 20px;
+    font-weight: 100;
+    font-size: 3rem;
+}
+
+.sloganSlide > a > button {
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    font-family: var(--font-main);
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    transition: all 200ms ease-in-out;
+    cursor: pointer;
+}
+
+.sloganSlide > a > button:hover {
+    transform: scale(1.1);
+    background-color: white;
+    color: black;
+}

@@ -4,11 +4,12 @@
     display: flex;
     flex-direction: column;
     gap: 100px;
+    font-family: var(--font-secondary);
 }
 
 .keyPoints > p {
     max-width: 30%;
-    font-family: var(--font-main);
+    font-family: var(--font-secondary);
     text-align: center;
     font-size: 2rem;
     font-weight: 100;

@@ -1,0 +1,7 @@
+.active {
+    color: var(--color-main);
+}
+
+.inactive {
+    color: #8d99ae;
+}

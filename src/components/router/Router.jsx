@@ -4,13 +4,23 @@ import Home from "../routes/home/Home";
 import AboutUs from "../routes/aboutUs/AboutUs";
 import Products from "../routes/products/Products";
 import ContactUs from "../routes/contactUs/ContactUs";
-import ProductDetail from "../routes/productDetail/ProductDetail";
+import SingleProduct from "../routes/products/singleProduct/SingleProduct";
+import Cart from "../routes/cart/Cart";
+import RenderProducts from "../routes/products/renderProducts/RenderProducts";
+import ErrorPage from "../errorPage/ErrorPage";
+// Contexts
+import CartContextProvider from "../../contexts/CartContextProvider";
 
 export default function Router() {
     const router = createHashRouter([
         {
             path: "/",
-            element: <App />,
+            element: (
+                <CartContextProvider>
+                    <App />
+                </CartContextProvider>
+            ),
+            errorElement: <ErrorPage />,
             children: [
                 {
                     index: true,
@@ -23,14 +33,28 @@ export default function Router() {
                 {
                     path: "products",
                     element: <Products />,
+                    children: [
+                        {
+                            path: "/products",
+                            element: <RenderProducts />,
+                        },
+                        {
+                            path: "category/:categoryId",
+                            element: <RenderProducts />,
+                        },
+                    ],
                 },
                 {
                     path: "products/:productId",
-                    element: <ProductDetail />,
+                    element: <SingleProduct />,
                 },
                 {
                     path: "contact-us",
                     element: <ContactUs />,
+                },
+                {
+                    path: "cart",
+                    element: <Cart />,
                 },
             ],
         },

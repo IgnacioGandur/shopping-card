@@ -1,21 +1,32 @@
-import { Link } from "react-router-dom";
+import { useContext } from "react";
+import CartContext from "../../contexts/CartContext";
+import { Link, NavLink } from "react-router-dom";
 import styles from "./Navbar.module.css";
 
 export default function Navbar() {
-    function setActiveTab(e) {
-        if (e.target.classList.contains(styles.active)) {
-            return;
-        }
-
-        const navbar = document.querySelector("nav");
-        const tabs = navbar.querySelectorAll("a");
-
-        for (let i = 0; i < tabs.length; i++) {
-            tabs[i].classList.remove(styles.active);
-        }
-
-        e.target.classList.add(styles.active);
-    }
+    const { amountOfItems } = useContext(CartContext);
+    const links = [
+        {
+            linkTo: "/",
+            text: "Home",
+        },
+        {
+            linkTo: "/products",
+            text: "Products",
+        },
+        {
+            linkTo: "/about-us",
+            text: "About Us",
+        },
+        {
+            linkTo: "/contact-us",
+            text: "Contact Us",
+        },
+        {
+            linkTo: "/cart",
+            text: "Cart",
+        },
+    ];
 
     return (
         <header className={styles.navbar}>
@@ -238,40 +249,30 @@ export default function Navbar() {
                 </svg>
             </div>
             <nav>
-                <Link
-                    to="/"
-                    className={styles.active}
-                    onClick={(e) => setActiveTab(e)}
-                >
-                    Home
-                </Link>
-                <Link
-                    to="/products"
-                    onClick={(e) => setActiveTab(e)}
-                >
-                    Products
-                </Link>
-                <Link
-                    to="/contact-us"
-                    onClick={(e) => setActiveTab(e)}
-                >
-                    Contact Us
-                </Link>
-                <Link
-                    to="/about-us"
-                    onClick={(e) => setActiveTab(e)}
-                >
-                    About Us
-                </Link>
+                {links.map((link) => (
+                    <NavLink
+                        key={link.linkTo}
+                        to={link.linkTo}
+                        className={({ isActive }) =>
+                            isActive ? styles.active : ""
+                        }
+                    >
+                        {link.text}
+                    </NavLink>
+                ))}
             </nav>
             <button className={styles.cartButton}>
-                <span className="material-symbols-rounded">shopping_bag</span>
-                <span
-                    data-products-in-cart="0"
-                    className={styles.productsInCart}
-                >
-                    0
-                </span>
+                <Link to="cart">
+                    <span className="material-symbols-rounded">
+                        shopping_bag
+                    </span>
+                    <span
+                        data-products-in-cart="0"
+                        className={styles.productsInCart}
+                    >
+                        {amountOfItems}
+                    </span>
+                </Link>
             </button>
         </header>
     );

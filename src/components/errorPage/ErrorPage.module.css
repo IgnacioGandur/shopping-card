@@ -1,0 +1,24 @@
+@import "../../styles/variables.css";
+
+.errorPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    font-family: var(--font-secondary);
+}
+
+.errorPage > h1 {
+    font-size: 2.5rem;
+}
+
+.errorPage > p {
+    opacity: 0.5;
+    font-size: 1.25rem;
+}
+
+.errorPage > a {
+    font-size: 1.5rem;
+    color: black;
+}

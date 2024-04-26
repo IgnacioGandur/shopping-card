@@ -1,0 +1,75 @@
+@import "../../../styles/variables.css";
+
+.aboutUs {
+    width: 98%;
+    height: 98%;
+    display: flex;
+    border-radius: 15px;
+    background-image: linear-gradient(#ffffff66, #ffffff66),
+        url("../../../assets/images/about-us-background-image.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 50px;
+}
+
+.aboutUs > * {
+    opacity: 1;
+}
+
+.aboutUs > h1 {
+    flex: 1;
+    font-size: 7rem;
+    font-family: var(--font-secondary);
+    align-self: flex-end;
+    font-weight: 400;
+}
+
+.aboutUs > .left {
+    flex: 1;
+    gap: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.aboutUs > .left > img {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.aboutUs > .left > p {
+    padding: 20px;
+    background-color: #ffffff55;
+    border-radius: 15px;
+    font-family: var(--font-secondary);
+    font-size: 1.1rem;
+    text-align: justify;
+}
+
+.aboutUs > .left > a > button {
+    border-radius: 10px;
+    /* background-color: #000000; */
+    background-color: #ffffff55;
+    color: black;
+    font-size: 1.25rem;
+    border: none;
+    padding: 15px 50px;
+    transition: all 300ms ease-in-out;
+    cursor: pointer;
+}
+
+.aboutUs > .left > a > button:hover {
+    transform: scale(1.1);
+    background-color: var(--color-main);
+    color: white;
+}
+
+.aboutUs > .left > a {
+    text-decoration: none;
+    font-family: var(--font-secondary);
+    color: white;
+}

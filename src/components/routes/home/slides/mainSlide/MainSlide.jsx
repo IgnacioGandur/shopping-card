@@ -1,55 +1,6 @@
-// Packages
-import { Link } from "react-router-dom";
-// Images
-import jewelery from "../../../assets/images/jewelery.jpg";
-import electronics from "../../../assets/images/electronics.jpg";
-import menClothing from "../../../assets/images/men-clothing.jpg";
-import womenClothing from "../../../assets/images/women-clothing.jpg";
-// Styles
-import styles from "./Slides.module.css";
+import styles from "./MainSlide.module.css";
 
-function Categories() {
-    const categories = [
-        {
-            imageUrl: jewelery,
-            description: "Jewelery",
-        },
-        {
-            imageUrl: electronics,
-            description: "Electronics",
-        },
-        {
-            imageUrl: menClothing,
-            description: "Men Clothing",
-        },
-        {
-            imageUrl: womenClothing,
-            description: "Women Clothing",
-        },
-    ];
-
-    return (
-        <div className={styles.slide}>
-            <h2>Shop By Category</h2>
-            {categories.map((category, index) => (
-                <div
-                    key={index}
-                    style={{
-                        backgroundImage: `linear-gradient(#00000055, #00000055),url(${category.imageUrl})`,
-                    }}
-                >
-                    <button
-                        aria-label={`Go to the ${category.description} category.`}
-                    >
-                        {category.description}
-                    </button>
-                </div>
-            ))}
-        </div>
-    );
-}
-
-function MainSlide() {
+export default function MainSlide() {
     return (
         <div className={styles.mainSlide}>
             <svg
@@ -272,22 +223,3 @@ function MainSlide() {
         </div>
     );
 }
-
-function ShopNow() {
-    return (
-        <div className={styles.shopNow}>
-            <h2>Where Shopping Reaches New Heights</h2>
-            <Link to="products">
-                <button aria-label="Go to products section">Shop Now</button>
-            </Link>
-        </div>
-    );
-}
-
-const slides = [
-    <MainSlide key="Main slide" />,
-    <ShopNow key="Shop now slide" />,
-    <Categories key="Categories slide" />,
-];
-
-export default slides;

@@ -1,0 +1,115 @@
+.contactUs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 75px;
+    font-family: var(--font-secondary);
+}
+
+.contactUs > .banner {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    background-image: url("../../../assets/images/banner-background.svg");
+    background-size: cover;
+}
+
+.contactUs > .banner > h1 {
+    font-size: 4rem;
+    text-align: center;
+    color: white;
+    padding: 30px 45px;
+    border: 1px solid white;
+    font-weight: 100;
+}
+
+.contactUs > h3 {
+    text-align: center;
+}
+
+.contactUs > h3 > span {
+    vertical-align: middle;
+    color: var(--color-main);
+    font-size: 3rem;
+    animation: beating 2s ease-in-out infinite alternate;
+}
+
+.contactUs > .contactForms {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    align-content: center;
+    gap: 25px;
+    padding: 0px 25px;
+}
+
+.contactUs > .contactForms > * {
+    flex: 1;
+    height: 100%;
+}
+
+.contactUs > .contactForms > .card {
+    display: flex;
+    height: 250px;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 25px;
+    background-image: linear-gradient(#ffffff88, #ffffff88),
+        url("../../../assets/images/card-background.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: black;
+}
+
+.contactUs > .contactForms > .card > span {
+    flex: 1;
+}
+
+.contactUs > .contactForms > .card > span > i {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 2px solid #00000011;
+    font-size: 3rem;
+    color: var(--color-main);
+}
+
+.contactUs > .contactForms > .card > p {
+    opacity: 0.5;
+}
+
+.contactUs > .contactForms > .card > a {
+    color: black;
+}
+
+.contactUs > .spacer {
+    width: 100%;
+    background-image: url("../../../assets/images/spacer.svg");
+    aspect-ratio: 900 / 300;
+    background-size: cover;
+}
+
+.contactUs > span {
+    opacity: 0.5;
+}
+
+@keyframes beating {
+    40% {
+        transform: scale(1.2);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    60% {
+        transform: scale(1.2);
+    }
+}

@@ -1,62 +1,3 @@
-@import "./../../../styles/variables.css";
-
-/* Categories slide */
-
-.slide {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.slide > div {
-    width: 50%;
-    height: 50%;
-    background-size: 100%;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 200ms ease-in;
-}
-
-.slide > div:hover {
-    background-size: 120%;
-}
-
-.slide > div > button {
-    padding: 10px 20px;
-    border: 1px solid white;
-    background-color: transparent;
-    color: white;
-    font-size: 1.1rem;
-    font-family: var(--font-main);
-    font-weight: 900;
-    transition: all 200ms ease-out;
-    cursor: pointer;
-}
-
-.slide > div > button:hover,
-.slide > div > button:focus-visible {
-    background-color: white;
-    color: black;
-    transform: scale(1.1);
-}
-
-.slide > h2 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 20px;
-    background-color: white;
-    color: black;
-    font-family: var(--font-main);
-    font-size: 1.25rem;
-}
-
-/* Main Slide */
-
 .mainSlide {
     width: 100%;
     height: 100%;
@@ -65,7 +6,7 @@
     align-items: center;
     justify-content: center;
     background-image: linear-gradient(#00000033, #00000033),
-        url("../../../assets/images/clouds.jpg");
+        url("../../../../../assets/images/clouds.jpg");
     background-size: cover;
     background-position: center;
     gap: 25px;
@@ -140,48 +81,6 @@
     text-align: center;
     color: white;
     font-weight: 100;
-}
-
-/* Shop now slide */
-
-.shopNow {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-image: linear-gradient(#00000055, #00000055),
-        url("../../../assets/images/gifts.jpg");
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    gap: 10px;
-}
-
-.shopNow > h2 {
-    font-family: var(--font-main);
-    color: white;
-    padding: 20px;
-    font-weight: 100;
-    font-size: 3rem;
-}
-
-.shopNow > a > button {
-    padding: 15px 30px;
-    font-size: 1.5rem;
-    font-family: var(--font-main);
-    background-color: transparent;
-    border: 1px solid white;
-    color: white;
-    transition: all 200ms ease-in-out;
-    cursor: pointer;
-}
-
-.shopNow > a > button:hover {
-    transform: scale(1.1);
-    background-color: white;
-    color: black;
 }
 
 @keyframes rotateStar {
