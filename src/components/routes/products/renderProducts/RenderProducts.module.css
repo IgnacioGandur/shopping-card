@@ -34,3 +34,8 @@
     font-family: var(--font-secondary);
     opacity: 0.5;
 }
+
+.failedToFetchScreen > span {
+    font-family: var(--font-secondary);
+    opacity: 0.5;
+}

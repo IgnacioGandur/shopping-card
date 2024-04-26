@@ -25,14 +25,14 @@ export default function SingleProduct() {
     const [amountOfProducts, setAmountOfProducts] = useState(1);
 
     const notification = () => {
-        toast(
+        toast.success(
             <Notification
                 product={product}
                 amount={amountOfProducts}
             />,
             {
                 style: {
-                    backgroundColor: "#7678edbb",
+                    backgroundColor: "#7678ed",
                 },
             },
         );

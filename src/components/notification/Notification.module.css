@@ -15,10 +15,10 @@
 
 .link > .notification > img {
     width: 75px;
-    height: 75px;
     padding: 7px;
     border-radius: 5px;
     background-color: #ffffff;
+    object-fit: scale-down;
 }
 
 .link > .notification > .text {
@@ -27,6 +27,10 @@
     gap: 15px;
     justify-content: center;
     background-color: #ffffff11;
+}
+
+.link > .notification > .text > h2 {
+    font-size: 1.25rem;
 }
 
 .toast {

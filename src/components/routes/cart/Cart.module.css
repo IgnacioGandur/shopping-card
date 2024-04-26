@@ -21,8 +21,22 @@
 }
 
 .cart > .title > button {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: transparent;
     border: none;
+    transition: all 200ms ease-in-out;
+    cursor: pointer;
+    border: 1px solid #00000033;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.cart > .title > button:hover {
+    transform: scale(1.1);
 }
 
 .cart > .title > button > span {
@@ -83,6 +97,7 @@
     /* justify-items: center; */
     align-items: center;
     gap: 15px;
+    border: 1px solid transparent;
 }
 
 .cart > .itemsList > .item > p {
@@ -139,8 +154,22 @@
 
 .cart > .itemsList > .item > .amount > button {
     background-color: transparent;
-    border: none;
+    border: 1px solid transparent;
     cursor: pointer;
+    transition: all 200ms ease-in-out;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.cart > .itemsList > .item > .amount > button:hover {
+    border: 1px solid #00000033;
+}
+
+.cart > .itemsList > .item > .amount > button:hover > span {
+    font-weight: 900;
 }
 
 .cart > .itemsList > .item > .amount > button > span {
@@ -155,9 +184,14 @@
 .cart > .itemsList > .item > button {
     grid-column: 6 / span 1;
     height: 100%;
-    border: none;
+    border: 1px solid transparent;
     background-color: transparent;
     cursor: pointer;
+    transition: all 200ms ease-in-out;
+}
+
+.cart > .itemsList > .item > button:hover {
+    border: 1px solid #00000033;
 }
 
 .cart > .itemsList > .item > button > span {

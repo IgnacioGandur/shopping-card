@@ -63,7 +63,6 @@ export default function CartContextProvider({ children }) {
             total += Number(cartItems[i].amount);
         }
 
-        console.log(total);
         setAmountOfItems(total);
     }, [cartItems]);
 

@@ -1,5 +1,5 @@
 // Packages
-import { useState, useEffect, useContext, Fragment } from "react";
+import { useContext, Fragment } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 // context
