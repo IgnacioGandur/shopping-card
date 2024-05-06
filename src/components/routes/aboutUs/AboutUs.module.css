@@ -25,7 +25,7 @@
     font-weight: 400;
 }
 
-.aboutUs > .left {
+.aboutUs > .right {
     flex: 1;
     gap: 50px;
     display: flex;
@@ -34,14 +34,14 @@
     align-items: flex-start;
 }
 
-.aboutUs > .left > img {
+.aboutUs > .right > img {
     width: 100%;
     height: 50%;
     object-fit: cover;
     border-radius: 15px;
 }
 
-.aboutUs > .left > p {
+.aboutUs > .right > p {
     padding: 20px;
     background-color: #ffffff55;
     border-radius: 15px;
@@ -50,7 +50,7 @@
     text-align: justify;
 }
 
-.aboutUs > .left > a > button {
+.aboutUs > .right > a > button {
     border-radius: 10px;
     /* background-color: #000000; */
     background-color: #ffffff55;
@@ -62,14 +62,41 @@
     cursor: pointer;
 }
 
-.aboutUs > .left > a > button:hover {
+.aboutUs > .right > a > button:hover {
     transform: scale(1.1);
     background-color: var(--color-main);
     color: white;
 }
 
-.aboutUs > .left > a {
+.aboutUs > .right > a {
     text-decoration: none;
     font-family: var(--font-secondary);
     color: white;
+}
+
+@media screen and (max-width: 1000px) {
+    .aboutUs {
+        width: 96%;
+        height: initial;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .aboutUs > h1 {
+        font-size: 5rem;
+        align-self: initial;
+        text-align: center;
+    }
+
+    .aboutUs > .right > a {
+        width: 100%;
+    }
+
+    .aboutUs > .right > a > button {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
 }

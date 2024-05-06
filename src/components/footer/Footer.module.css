@@ -31,3 +31,9 @@
     color: var(--color-main);
     transition: transform 200ms ease-in-out;
 }
+
+@media screen and (max-width: 500px) {
+    .footer {
+        display: none;
+    }
+}

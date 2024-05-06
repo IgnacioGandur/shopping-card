@@ -51,24 +51,24 @@ export default function Carousel({ slides }) {
                     arrow_back
                 </span>
             </button>
-            <div
+            <ul
                 onMouseEnter={() => setAutoSlide(false)}
                 onMouseLeave={() => setAutoSlide(true)}
                 className={styles.slidesContainer}
             >
                 {slides.map((slide, index) =>
                     slide.props ? (
-                        <div
+                        <li
                             aria-label={`Slide number ${index + 1}`}
-                            aria-hidden={currentIndex !== index}
-                            className={styles.slide}
+                            aria-hidden={currentIndex !== index ? true : false}
+                            className={`${styles.slide} ${currentIndex === index ? styles.active : ""}`}
                             key={index}
                             style={{
                                 translate: `${-100 * currentIndex}%`,
                             }}
                         >
                             {slide}
-                        </div>
+                        </li>
                     ) : (
                         <img
                             aria-hidden={currentIndex !== index}
@@ -82,7 +82,7 @@ export default function Carousel({ slides }) {
                         />
                     ),
                 )}
-            </div>
+            </ul>
             <button
                 aria-label="Go to next slide"
                 onClick={nextSlide}

@@ -100,6 +100,18 @@
     opacity: 0.5;
 }
 
+@media screen and (max-width: 1000px) {
+    .contactUs > .contactForms > .card {
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .contactUs > .banner {
+        padding: 0px 25px;
+    }
+}
+
 @keyframes beating {
     40% {
         transform: scale(1.2);

@@ -50,3 +50,14 @@
     font-family: var(--font-main);
     font-size: 1.25rem;
 }
+
+@media screen and (max-width: 1000px) {
+    .categoriesSlide > div {
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .categoriesSlide > div:hover {
+        background-size: 140%;
+    }
+}

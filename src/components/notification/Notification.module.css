@@ -22,11 +22,14 @@
 }
 
 .link > .notification > .text {
+    flex: 1;
     display: flex;
     flex-direction: column;
     gap: 15px;
     justify-content: center;
     background-color: #ffffff11;
+    padding: 1em;
+    border-radius: 0.5em;
 }
 
 .link > .notification > .text > h2 {

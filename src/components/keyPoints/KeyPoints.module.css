@@ -22,14 +22,15 @@
     color: var(--color-main);
 }
 
-.keyPoints .grid {
+.keyPoints > .grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 300px);
-    gap: 25px;
+    grid-template-columns: repeat(auto-fill, minmax(32%, 1fr));
+    justify-content: center;
+    gap: 2em;
 }
 
 .keyPoints .grid .point {
+    height: 25em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -39,6 +40,7 @@
     gap: 10px;
     background-color: var(--color-main);
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    text-align: center;
 }
 
 .keyPoints > .grid > .point > span {
@@ -76,6 +78,27 @@
     text-align: center;
     font-size: 1.25rem;
     max-width: 75%;
+}
+
+@media screen and (max-width: 1000px) {
+    .keyPoints > p {
+        width: 75%;
+        max-width: 75%;
+    }
+
+    .keyPoints > .grid {
+        grid-template-columns: repeat(auto-fill, minmax(48%, 1fr));
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .keyPoints > p {
+        width: 100%;
+        max-width: initial;
+    }
+    .keyPoints > .grid > .point {
+        width: 100%;
+    }
 }
 
 @keyframes spin {

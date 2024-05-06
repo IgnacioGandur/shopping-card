@@ -1,9 +1,8 @@
 .products {
     flex: 1;
-    width: 100%;
+    height: fit-content;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
-    grid-template-rows: repeat(700px);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 40px;
     padding: 25px;
 }

@@ -1,3 +1,6 @@
+.active {
+    z-index: 100;
+}
 .carousel {
     /* max-width: 1700px; */
     width: 100%;
@@ -9,6 +12,8 @@
     display: flex;
     flex-direction: column;
     border-radius: 15px;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
 }
 
 .carousel > button {
@@ -23,7 +28,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 100;
+    z-index: 200;
 }
 
 .carousel > button.previous {
@@ -55,12 +60,14 @@
     display: flex;
 }
 
+.carousel > .slidesContainer > .slide,
 .carousel > .slidesContainer > * {
     width: 100%;
     height: 100%;
     flex-grow: 0;
     flex-shrink: 0;
     transition: all 200ms ease-in-out;
+    scroll-snap-align: center;
 }
 
 .carousel > .slidesContainer > img {
@@ -109,4 +116,13 @@
 
 .carousel > .navigation > button > span {
     color: white;
+}
+
+@media screen and (max-width: 1000px) {
+}
+
+@media screen and (max-width: 500px) {
+    .carousel {
+        display: none;
+    }
 }

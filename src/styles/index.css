@@ -13,7 +13,8 @@ body {
 }
 
 body {
-    background-color: #f9f9f9;
+    /* background-color: #f9f9f9;          Previous Color */
+    background-color: #ededed; /* New Color */
     color: var(--color-font);
     display: flex;
     justify-content: center;
@@ -31,4 +32,27 @@ body {
 #root section,
 #root main {
     flex: 1;
+}
+
+.Toastify__toast-container {
+    width: 600px;
+}
+
+@media screen and (max-width: 1000px) {
+    #root {
+        gap: 2em;
+    }
+
+    .Toastify__toast-container {
+        width: fit-content;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #root {
+        gap: 1em;
+    }
+    .Toastify__toast-container {
+        width: 100%;
+    }
 }

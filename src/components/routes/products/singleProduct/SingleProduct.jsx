@@ -86,7 +86,8 @@ export default function SingleProduct() {
             aria-label={`Product: ${product.title}`}
             className={styles.singleProduct}
         >
-            <ToastContainer style={{ width: "600px" }} />
+            <ToastContainer />
+            <h1 className={styles.mobileTitle}>{product.title}</h1>
             <div className={styles.imageContainer}>
                 <img
                     src={product.image}

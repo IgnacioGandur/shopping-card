@@ -1,6 +1,6 @@
 // Packages
 import Carousel from "../../carousel/Carousel";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 // Slides
 import MainSlide from "./slides/mainSlide/MainSlide";
 import CategoriesSlide from "./slides/categoriesSlide/CategoriesSlide";
@@ -17,13 +17,15 @@ export default function Home() {
         <CategoriesSlide key="categories slide" />,
     ];
     return (
-        <AnimatePresence>
+        <AnimatePresence mode="popLayout">
             <motion.main
+                key="home"
+                aria-label="Home page"
                 className={styles.home}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
                 transition={{ duration: 0.5 }}
-                exit={{ opacity: 0, scale: 0 }}
             >
                 <Carousel slides={slides} />
                 <KeyPoints />

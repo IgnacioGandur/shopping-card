@@ -7,6 +7,7 @@ export default function AboutUs() {
     return (
         <AnimatePresence>
             <motion.section
+                aria-label="About us section"
                 className={styles.aboutUs}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -14,7 +15,7 @@ export default function AboutUs() {
                 exit={{ opacity: 0, scale: 0 }}
             >
                 <h1>About Us</h1>
-                <div className={styles.left}>
+                <div className={styles.right}>
                     <img
                         src={sampleProduct}
                         alt="Products"

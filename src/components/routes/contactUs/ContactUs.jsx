@@ -51,6 +51,7 @@ export default function ContactUs() {
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.5 }}
                 className={styles.contactUs}
+                aria-label="Contact us section"
             >
                 <div className={styles.banner}>
                     <h1>Contact Us</h1>

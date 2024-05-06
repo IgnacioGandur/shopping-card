@@ -83,6 +83,15 @@
     font-weight: 100;
 }
 
+@media screen and (max-width: 1000px) {
+    .mainSlide > svg {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 500px) {
+}
+
 @keyframes rotateStar {
     from {
         transform: rotateZ(0deg);

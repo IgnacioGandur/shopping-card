@@ -10,13 +10,15 @@ export default function Products() {
     return (
         <AnimatePresence>
             <motion.section
+                key="products"
                 className={styles.section}
                 aria-label="Products section"
                 initial={{
                     opacity: 0,
                 }}
                 animate={{ opacity: 1 }}
-                transition={{ duration: 0.5 }}
+                transition={{ duration: 1 }}
+                exit={{ x: "-100%" }}
             >
                 <FilterCategories />
                 <div className={styles.divider}></div>

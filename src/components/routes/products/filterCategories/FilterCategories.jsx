@@ -5,7 +5,7 @@ import { NavLink, Link } from "react-router-dom";
 import styles from "./FilterCategories.module.css";
 
 export default function FilterCategories() {
-    const [showCategories, setShowCategories] = useState(true);
+    const [showCategories, setShowCategories] = useState(false);
     const categories = [
         "electronics",
         "jewelery",

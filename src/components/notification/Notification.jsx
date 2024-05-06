@@ -31,5 +31,5 @@ export default function Notification({ product, amount }) {
 
 Notification.propTypes = {
     product: PropTypes.object,
-    amount: PropTypes.string,
+    amount: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
