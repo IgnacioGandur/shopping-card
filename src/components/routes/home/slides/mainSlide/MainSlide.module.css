@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: center;
     background-image: linear-gradient(#00000033, #00000033),
-        url("../../../../../assets/images/clouds.jpg");
+        url("../../../../../assets/images/clouds.webp");
     background-size: cover;
     background-position: center;
     gap: 25px;
