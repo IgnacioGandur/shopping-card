@@ -1,10 +1,10 @@
 // Packages
 import { Link } from "react-router-dom";
 // Images
-import jewelery from "../../../../../assets/images/jewelery.webp";
-import electronics from "../../../../../assets/images/electronics.webp";
-import menClothing from "../../../../../assets/images/men-clothing.webp";
-import womenClothing from "../../../../../assets/images/women-clothing.webp";
+import jewelery from "../../../../../assets/images/jewelery.jpg";
+import electronics from "../../../../../assets/images/electronics.jpg";
+import menClothing from "../../../../../assets/images/men-clothing.jpg";
+import womenClothing from "../../../../../assets/images/women-clothing.jpg";
 // Styles
 import styles from "./CategoriesSlide.module.css";
 

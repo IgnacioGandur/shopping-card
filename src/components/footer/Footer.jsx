@@ -8,6 +8,7 @@ export default function Footer() {
                 <a
                     href="https://github.com/IgnacioGandur/shopping-cart"
                     target="_blank"
+                    aria-label="Go to the autor's github page"
                 >
                     <i className="fa-brands fa-github"></i>
                 </a>

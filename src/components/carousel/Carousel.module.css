@@ -2,7 +2,6 @@
     z-index: 100;
 }
 .carousel {
-    /* max-width: 1700px; */
     width: 100%;
     min-height: 600px;
     max-height: 600px;
@@ -17,6 +16,9 @@
 }
 
 .carousel > button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 40px;
     height: 40px;
     border: transparent;

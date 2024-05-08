@@ -17,7 +17,7 @@ export default function Home() {
         <CategoriesSlide key="categories slide" />,
     ];
     return (
-        <AnimatePresence initial={false}>
+        <AnimatePresence>
             <motion.main
                 key="home"
                 aria-label="Home page"

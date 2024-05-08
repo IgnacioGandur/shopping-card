@@ -3,7 +3,6 @@ import CartContext from "../../contexts/CartContext";
 import { Link, NavLink } from "react-router-dom";
 import styles from "./Navbar.module.css";
 import { motion, AnimatePresence } from "framer-motion";
-import logo from "../../assets/Logo.svg";
 
 export default function Navbar() {
     const [showMobileNavbar, setShowMobileNavbar] = useState(false);
@@ -282,11 +281,14 @@ export default function Navbar() {
                     className={styles.cartButton}
                 >
                     <Link to="cart">
-                        <span className="material-symbols-rounded">
+                        <span
+                            aria-hidden
+                            className="material-symbols-rounded"
+                        >
                             shopping_bag
                         </span>
                         <span
-                            data-products-in-cart="0"
+                            aria-label="Current of items in your cart"
                             className={styles.productsInCart}
                         >
                             {amountOfItems}
@@ -305,10 +307,9 @@ export default function Navbar() {
                     >
                         <span className="material-symbols-rounded">menu</span>
                     </button>
-                    <img
-                        src={logo}
-                        alt="Website logo"
-                    />
+                    <h1>
+                        <span>S</span>tellar <span>S</span>hop
+                    </h1>
                 </>
                 <AnimatePresence>
                     {showMobileNavbar && (

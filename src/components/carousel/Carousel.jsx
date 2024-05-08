@@ -60,6 +60,7 @@ export default function Carousel({ slides }) {
                     slide.props ? (
                         <li
                             aria-label={`Slide number ${index + 1}`}
+                            // Hide the inactive slides from assistive tecnologies.
                             aria-hidden={currentIndex !== index ? true : false}
                             className={`${styles.slide} ${currentIndex === index ? styles.active : ""}`}
                             key={index}

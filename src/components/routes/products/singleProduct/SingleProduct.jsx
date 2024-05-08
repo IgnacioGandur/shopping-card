@@ -1,16 +1,15 @@
 // Packages
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useEffect, useState, useContext } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { toast, ToastContainer } from "react-toastify";
 // Components
 import Loader from "../loader/Loader";
 import StarRating from "../starRating/StarRating";
 import Notification from "../../../notification/Notification";
+import ProductNotFound from "./productNotFoundl/ProductNotFound";
 // Contexts
 import CartContext from "../../../../contexts/CartContext";
-// Images
-import productNotFound from "../../../../assets/images/product-not-found.svg";
 // Styles
 import styles from "./SingleProduct.module.css";
 import "react-toastify/dist/ReactToastify.css";
@@ -52,28 +51,32 @@ export default function SingleProduct() {
         setAmountOfProducts(1);
     }
 
-    if (error)
-        return (
-            <AnimatePresence>
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.5 }}
-                    className={styles.productNotFound}
-                >
-                    <h1>
-                        Sorry, we couldn&apos;t find the product you were
-                        looking for...
-                    </h1>
-                    <img
-                        src={productNotFound}
-                        alt="Product not found"
-                    />
-                    <Link to="/products">Go back to products</Link>
-                </motion.div>
-            </AnimatePresence>
-        );
+    // if (error)
+    //     return (
+    //         <AnimatePresence>
+    //             <motion.div
+    //                 initial={{ opacity: 0 }}
+    //                 animate={{ opacity: 1 }}
+    //                 exit={{ opacity: 0 }}
+    //                 transition={{ duration: 0.5 }}
+    //                 className={styles.productNotFound}
+    //             >
+    //                 <h1>
+    //                     Sorry, we couldn&apos;t find the product you were
+    //                     looking for...
+    //                 </h1>
+    //                 <img
+    //                     src={productNotFound}
+    //                     alt="Product not found"
+    //                 />
+    //                 <Link to="/products">Go back to products</Link>
+    //             </motion.div>
+    //         </AnimatePresence>
+    //     );
+
+    if (error) {
+        return <ProductNotFound />;
+    }
 
     if (isLoading) return <Loader />;
 

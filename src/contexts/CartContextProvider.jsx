@@ -12,6 +12,7 @@ export default function CartContextProvider({ children }) {
 
         let targetIndex = undefined;
 
+        // Check if the product to add in the cart is already in the cart.
         for (let i = 0; i < cartItems.length; i++) {
             if (cartItems[i].id === product.id) {
                 targetIndex = i;
@@ -20,12 +21,14 @@ export default function CartContextProvider({ children }) {
             }
         }
 
+        // If it is present in the cart don't added again, just increase the amount of the added product.
         if (productIsInCart) {
             const updatedCart = [...cartItems];
             updatedCart[targetIndex].amount += number;
             setCartItems(updatedCart);
         }
 
+        // If it's not in the cart add the product and an 'amount' property.
         if (!productIsInCart) {
             product.amount = number;
             setCartItems([...cartItems, product]);
@@ -56,6 +59,7 @@ export default function CartContextProvider({ children }) {
         }
     }
 
+    // Get the total amount of items in the cart every time a product gets added.
     useEffect(() => {
         let total = 0;
 

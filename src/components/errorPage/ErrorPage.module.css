@@ -22,3 +22,22 @@
     font-size: 1.5rem;
     color: black;
 }
+
+@media screen and (max-width: 1000px) {
+    .errorPage {
+        text-align: center;
+        padding: 2em;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .errorPage {
+        text-align: center;
+    }
+    .errorPage > h1 {
+        font-size: 2rem;
+    }
+    .errorPage > img {
+        width: 100%;
+    }
+}

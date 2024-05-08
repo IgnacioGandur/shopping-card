@@ -8,8 +8,6 @@ import errorImage from "../../assets/images/not-found-page.svg";
 
 export default function ErrorPage() {
     const error = useRouteError();
-    console.log(error.error.message);
-
     return (
         <AnimatePresence>
             <motion.section

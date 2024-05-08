@@ -153,30 +153,6 @@
     font-size: 1.2rem;
 }
 
-.productNotFound {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
-}
-
-.productNotFound > h1 {
-    text-align: center;
-    font-family: var(--font-secondary);
-}
-
-.productNotFound > img {
-    width: 90%;
-}
-
-.productNotFound > a {
-    font-family: var(--font-secondary);
-    font-size: 1.25rem;
-    color: black;
-}
-
 @media screen and (max-width: 1000px) {
     .singleProduct {
         flex-direction: column;
@@ -208,6 +184,7 @@
     .singleProduct > .mobileTitle {
         display: block;
         text-align: center;
+        font-size: 2rem;
     }
 
     .singleProduct > .imageContainer {

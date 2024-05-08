@@ -2,7 +2,7 @@
 import { useContext, Fragment } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-// context
+// contexts
 import CartContext from "../../../contexts/CartContext";
 // Styles
 import styles from "./Cart.module.css";
@@ -19,6 +19,7 @@ export default function Cart() {
 
     const navigate = useNavigate();
 
+    // Get the total price for the items in the cart.
     function getTotal(cartItems) {
         let total = 0;
         // Loop through the cart

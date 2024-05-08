@@ -8,7 +8,7 @@ export default function ContactUs() {
         {
             title: "Twitter",
             icon: "fa-brands fa-square-x-twitter",
-            description: "Reach to use through X.",
+            description: "Reach us through X.",
             link: "Stellar Shop on X",
         },
         {

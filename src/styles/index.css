@@ -1,7 +1,6 @@
 @import "./variables.css";
 
 * {
-    /* border: 1px solid red; */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -13,8 +12,7 @@ body {
 }
 
 body {
-    /* background-color: #f9f9f9;          Previous Color */
-    background-color: #ededed; /* New Color */
+    background-color: #ededed;
     color: var(--color-font);
     display: flex;
     justify-content: center;

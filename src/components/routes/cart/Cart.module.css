@@ -4,7 +4,6 @@
     flex: 1;
     width: 100%;
     max-width: 1600px;
-    /* height: 100%; */
     display: grid;
     grid-template-columns: 3fr minmax(300px, 1fr);
     grid-template-rows: 0.25fr 4fr;
@@ -270,6 +269,8 @@
     font-weight: 600;
     text-align: center;
 }
+
+/* Empty cart section */
 
 .emptyCart {
     flex: 1;

@@ -1,18 +1,13 @@
 // Packages
-import { useState } from "react";
 import { describe, expect, it } from "vitest";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { BrowserRouter, MemoryRouter, HashRouter } from "react-router-dom";
-import { useContext } from "react";
+import { BrowserRouter } from "react-router-dom";
 // Components
 import App from "../app/App";
 import Router from "../router/Router";
 import Navbar from "./Navbar";
 import CartContextProvider from "../../contexts/CartContextProvider";
-// Contexts
-import CartContext from "../../contexts/CartContext";
-import Cart from "../routes/cart/Cart";
 
 describe("Navbar component", () => {
     it("Should render the navbar", () => {
@@ -168,7 +163,7 @@ describe("Navbar component", () => {
                 </Router>,
             );
 
-            const link = screen.getByRole("link", { name: /cart/i });
+            const link = screen.getByRole("link", { name: "Cart" });
             await user.click(link);
             expect(
                 screen.getByRole("region", { name: "Empty cart section" }),

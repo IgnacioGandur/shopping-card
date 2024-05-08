@@ -1,0 +1,45 @@
+.productNotFound {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.productNotFound > h1 {
+    text-align: center;
+    font-family: var(--font-secondary);
+}
+
+.productNotFound > img {
+    width: 90%;
+}
+
+.productNotFound > a {
+    font-family: var(--font-secondary);
+    font-size: 1.25rem;
+    color: black;
+}
+
+@media screen and (max-width: 1000px) {
+    .productNotFound {
+        padding: 1em 2em;
+        text-align: center;
+    }
+
+    .productNotFound > h1 {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .productNotFound {
+        padding: 1em 2em;
+        text-align: center;
+    }
+
+    .productNotFound > h1 {
+        font-size: 2rem;
+    }
+}

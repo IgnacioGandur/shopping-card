@@ -6,9 +6,9 @@
     align-items: center;
     justify-content: center;
     background-image: linear-gradient(#00000055, #00000055),
-        url("../../../../../assets/images/gifts.webp");
+        url("../../../../../assets/images/gifts.jpg");
     background-size: cover;
-    background-position: top center;
+    background-position: center center;
     background-repeat: no-repeat;
     gap: 10px;
 }

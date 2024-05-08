@@ -1,4 +1,6 @@
+// Packages
 import { createHashRouter, RouterProvider } from "react-router-dom";
+// Components
 import App from "../app/App";
 import Home from "../routes/home/Home";
 import AboutUs from "../routes/aboutUs/AboutUs";

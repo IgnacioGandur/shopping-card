@@ -35,7 +35,3 @@
 .link > .notification > .text > h2 {
     font-size: 1.25rem;
 }
-
-.toast {
-    background-color: red !important;
-}
